@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Home Page -->
+<header>
+    <h1>Welcome to Our Clothing Store</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <h2>Product Name</h2>
+        <p>$XX.XX</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <h2>Product Name</h2>
+        <p>$XX.XX</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <!-- Add more products here -->
+
+</div>
+
+<!-- Checkout Page -->
+<div id="checkout" class="hidden">
+    <h2>Checkout</h2>
+    <form action="checkout.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br>
+
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+<script>
+    const checkoutButton = document.querySelector('.checkout-button');
+    const checkoutPage = document.getElementById('checkout');
+
+    checkoutButton.addEventListener('click', function() {
+        checkoutPage.classList.toggle('hidden');
+    });
+</script>
+
+</body>
+</html>
+
+
